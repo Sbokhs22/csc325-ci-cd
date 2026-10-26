@@ -1,6 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+
 @api_view(['GET'])
 def status_view(request):
-    return Response({'message': 'CSC 325 CI/CD API', 'status': 'ok'})
+    return Response({
+        'message': 'CSC 325 CI/CD API',
+        'status': 'ok',
+        'version': '1.1'
+    })
